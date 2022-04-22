@@ -14,12 +14,52 @@
     h1{
       color: white;
     }
+    
     p{
       color: white;
     }
+    .profile img {
+      transition: transform .5s, filter 1.5s ease-in-out;
+      filter: grayscale(70%);
+      width: 60%;
+    }
     
-    img, svg {
-    width: 400px;
+    /* The Transformation */
+    .profile:hover img {
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
+    .hm{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .hm p{
+      width: 70%;
+      font-size: 16px;
+    }
+    .hm h1{
+      width: 20ch;
+    animation: text 3s steps(20)infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 35px;
+    font-weight: 700;
+    }
+    @keyframes text {
+      0%{
+        width: 0
+      }
+      50%{
+          width: 20ch;
+        }
+    }
+    .past a img{
+      width: 100%;
+      opacity: 60%;
     }
     
   </style>
@@ -40,14 +80,14 @@
 
       <div class="container-fluid">
         <div class="row justify-content-evenly text-center" id="home">
-          <div class="col-md-5 mt-5 pt-5">
-            <h1> Designer & <br>
+          <div class="col-md-5 mt-5 pt-5 hm">
+            <h1> Designer &
               Developer </h1>
-              <p>We are here to answer any questions, resolve any <br>issues and provide creative solutions to your <br>most pressing issues, at any time.</p>
+              <p>We are here to answer any questions, resolve any issues and provide creative solutions to your most pressing issues, at any time.</p>
               <a class="btn btn-primary" href="#contact" role="button">CONTACT US</a>
           </div>
-          <div class="col-md-5 mt-5" id="main-img">
-            <img src="image/mj.jpg" class="rounded float-end image-fluid" alt="Mujtaba_photo">
+          <div class="col-md-5 mt-5 pt-5 d-flex justify-content-evenly align-items-center profile" id="main-img">
+            <img src="image/portfolio.png" class="rounded float-end image-fluid" alt="Mujtaba_photo">
             
           </div>
         </div>
@@ -59,12 +99,12 @@
               <br> • Matric - Govt. Islamia High School N0. 1, Gujrat, Pakistan</p>
           </div>
         </div>
-        <div class="row justify-content-evenly text-center">
+        <div class="row d-flex justify-content-evenly align-items-center text-center">
           <div class="col-md-5 mt-5 pt-3" >
             <h4 class="display-4" style="color: white;">MY PAST <br> PROJECT</h4>
           </div>
-          <div class="col-md-5 mt-5" >
-            <a href="https://muh-mujtaba.github.io/e-commerce/"><img src="image/Screenshot (604).png" class="rounded float-end image-fluid" alt="past project"></a>
+          <div class="col-md-5 col-sm-8  mt-5 past" >
+            <a href="https://muh-mujtaba.github.io/education/"><img src="image/education.png" class="rounded float-end image-fluid" alt="past project"></a>
           </div>
           
         </div>
@@ -72,17 +112,17 @@
         <div class="row justify-content-evenly text-center">
 
           <div class="col-md-3 mt-5 pt-5">
-            <h1 class="mt-5 pt-5">Office Colleagues Recommendation</h1>
+            <h1 class="mt-5 pt-5 pe-2">Office Colleagues Recommendation</h1>
           </div>
 
           <div class="col-md-8">
           <div class="row justify-content-evenly">
-            <div class="col-md-4 mt-5  pt-5 rounded text-center" style="background-color: #464646;">
+            <div class="col-md-4 col-sm-7 mt-5  pt-5 rounded text-center" style="background-color: #464646;">
               <img src="image/alee.jpg" class="rounded  image-fluid rounded-circle w-50 mb-2" alt="reveiw">
               <p><strong>Ali Hassan</strong></p>
               <p>You cannot go wrong with Mujtaba's team of experts. I highly recommend them.</p>
             </div>
-            <div class="col-md-4 mt-5  pt-5 rounded text-center" style="background-color: #464646;">
+            <div class="col-md-4 col-sm-7 mt-5  pt-5 rounded text-center" style="background-color: #464646;">
               <img src="image/ans.jpg" class="rounded  image-fluid rounded-circle w-50 mb-2" alt="reveiw">
               <p><strong>MR Anss</strong></p>
               <p>Mujtaba is an excellent all-rounded developer. He'll work with you to ensure that your needs are met. </p>
